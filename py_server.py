@@ -18,7 +18,9 @@ import sys
 try:
     personServiceHandler = PersonServiceImpl()
     processor = PersonService.Processor(personServiceHandler)
-    serverSocket = TSocket.TServerSocket(port=8899, socket_family=socket.AF_INET)
+    #serverSocket = TSocket.TServerSocket(port=8899)
+    #serverSocket = TSocket.TServerSocket(port=8899, socket_family=socket.AF_INET)
+    serverSocket = TSocket.TServerSocket(port=8899)
     #serverSocket = TSocket.TServerSocket(host='localhost',port=8899)
     transportFactory = TTransport.TFramedTransportFactory()
     protocolFactory = TCompactProtocol.TCompactProtocolFactory()
